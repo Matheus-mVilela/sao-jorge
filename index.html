@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SÃO JORGE CARROCERIAS</title>
+
+    <!--Style page-->
+    <link rel="stylesheet" href="static/css/stylePage.css">
+
+    <!--Fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Link POPUP CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha256-PZLhE6wwMbg4AB3d35ZdBF9HD/dI/y4RazA3iRDurss=" crossorigin="anonymous" />
+
+    <!-- Link Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw=" crossorigin="anonymous" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css" integrity="sha256-6hqHMqXTVEds1R8HgKisLm3l/doneQs+rS1a5NLmwwo=" crossorigin="anonymous" />
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f7f7f7;
+            color: #000000;
+        }
+        /*Nav Bar*/
+
+        .bars {
+            display: none;
+        }
+
+        header {
+            background-color: transparent;
+            position: fixed;
+            z-index: 10000;
+            width: 100%;
+            color: #fff;
+            padding: 25px 0px 15px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .secondary-bg {
+            background-color: #131633;
+            transition: 0.5s ease-out;
+            border-bottom: 1px solid white;
+        }
+
+        header nav ul li a {
+            color: white;
+            padding: 7px 10px;
+            border: 1px solid white;
+
+            opacity: 0.7;
+            transition: 0.2 ease;
+        }
+
+        #corBranca {
+            color: white;
+            text-decoration: none;
+        }
+
+        #corBranca:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        header nav ul li a:hover {
+            opacity: 1;
+            color: white;
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        header nav ul {
+            font-size: 18px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            list-style: none;
+        }
+
+        header nav li {
+            margin: 0 6px;
+        }
+
+        header nav li:first-child {
+            margin-left: 0;
+        }
+
+        header nav li:last-child {
+            margin-right: 0;
+        }
+
+        @media(max-width:860px) {
+            header nav ul li a {
+                font-size: 12px;
+            }
+            .bars {
+                position: fixed;
+                display: block;
+                z-index: 10000;
+                font-size: 20px;
+                margin-left: 10px;
+                margin-top: 5px;
+                background-color: transparent;
+                border: none;
+                color: #ffffff;
+                background-color: #131633;
+                padding: 5px 5px;
+                border-radius: 10px;
+                border: 1px solid white;
+            }
+            header {
+                display: none;
+                background-color: #131633;
+                text-align: center;
+                flex-direction: column;
+                padding: 10px 50px 10px 50px;
+                z-index: 1000;
+            }
+            header nav ul {
+                justify-content: center;
+            }
+            .displayblock {
+                display: block;
+            }
+            .colorwhite {
+                color: white;
+            }
+        }
+
+        @media(max-width:670px) {
+            header {
+                border-bottom: 1px solid white;
+            }
+            header nav ul {
+                flex-direction: column;
+                padding: 10px 0;
+            }
+            header nav li {
+                margin: 0 0 10px 0;
+            }
+            header nav li:last-child {
+                margin: 0;
+            }
+        }
+        carrocel-img {
+            position: relative;
+            background: #313D4C;
+        }
+        /*--------------------------*/
+    </style>
+</head>
+
+
+<body>
+    <!-- INICIO BARRA DE MENU-->
+    <i id="bar-Id" onclick="showNav()" class="bars fa fa-bars"></i>
+    <header id="header-Id">
+        <nav>
+            <ul>
+                <li><a class="my-nav-link" id="corBranca" href="#home">HOME</a></li>
+                <li><a class="my-nav-link" id="corBranca" href="#ID-us-work">NOSSO TRABALHO</a></li>
+                <li><a class="my-nav-link" id="corBranca" href="#LocalMap">LOCALIZAÇÃO</a></li>
+                <li><a class="my-nav-link" id="corBranca" href="#Rodape">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- FINAL BARRA DE MENU-->
+
+    <!-- INICIO CARROCEL-->
+    <section id="home">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="static/img/pn-1.png" class="img-fluid"  alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="static/img/pn-2.png"  class="img-fluid"  alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="static/img/pn-3.png" class="img-fluid"  alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+    <!-- FINAL CARROCEL-->
+
+
+    <!-- INICIO NOSSO TRABALHO -->
+    <section id="ID-us-work" class="us-work">
+        <div class="container">
+            <div class="row wow animate__animated animate__lightSpeedInLeft">
+                <div class="col-xl-12">
+                    <div class="section-title text-center">
+                        <h1 class="title">Você já conhece nosso trabalho ?</h1>
+                        <h2 class="sub-title">Temos o orgulho de mostrar alguns de nossos trabalhos. <br> Confira e veja que somos a melhor opção para atender sua necessidade.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+
+                <div class="col-md-6 col-sm-6 col-xs-6" style="height: 100%;">
+                    <div class="img-wrapper">
+                        <a href="static/img/nt-1.png">
+                            <img src="static/img/nt-1.png" class="img-responsive wow animate__animated animate__flipInX" data-wow-duration="1s" data-wow-delay="0.3s">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="img-wrapper">
+                        <a href="static/img/nt-2.png">
+                            <img src="static/img/nt-2.png" class="img-responsive wow animate__animated animate__flipInX" data-wow-duration="1s" data-wow-delay="0.3s">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="img-wrapper">
+                        <a href="static/img/nt-3.png">
+                            <img src="static/img/nt-3.png" class="img-responsive wow animate__animated animate__flipInX" data-wow-duration="1s" data-wow-delay="0.3s">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="img-wrapper">
+                        <a href="static/img/nt-4.png">
+                            <img src="static/img/nt-4.png" class="img-responsive wow animate__animated animate__flipInX" data-wow-duration="1s" data-wow-delay="0.3s">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="img-wrapper">
+                        <a href="static/img/nt-5.png">
+                            <img src="static/img/nt-5.png" class="img-responsive wow animate__animated animate__flipInX" data-wow-duration="1s" data-wow-delay="0.3s">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="img-wrapper">
+                        <a href="static/img/nt-6.png">
+                            <img src="static/img/nt-6.png" class="img-responsive wow animate__animated animate__flipInX" data-wow-duration="1s" data-wow-delay="0.3s">
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="LocalMap" class="mapa">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section-title text-center wow animate__animated animate__lightSpeedInLeft">
+                        <h1 class="title">Venha nos fazer uma visita !</h1>
+                        <h2 class="sub-title">Localização e contatos. <br></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1796.1852959429832!2d-49.324907861388986!3d-23.49390039471156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c174e269e67831%3A0x2bc9ea2f021a0f9!2sZelinda%20Cavini%20Benini%2C%20Taquarituba%20-%20SP%2C%2018740-000!5e1!3m2!1spt-BR!2sbr!4v1708894306739!5m2!1spt-BR!2sbr"
+            width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+
+        <div class="container-fluid">
+            <div class="row contact-infos">
+                <div class="col-md-6 text-center wow animate__animated animate__fadeInLeft" data-wow-duration="0.34s" data-wow-delay=".4s">
+                    <a href="https://www.google.com/maps/dir//-23.3890735,-49.5152036/@-23.389073,-49.515204,873m/data=!3m1!1e3?hl=pt-BR" target="_blank">
+                        <span class="contact-icon"><i class="fa fa-map-marker-alt"></i></span>
+                        <p class="contact-detail">
+                            Rua Zelinda Cavini Benini, 46<br> Aleixo-Taquarituba, São Paulo
+                        </p>
+                    </a>
+                </div>
+                <div class="col-md-6 text-center wow animate__animated animate__fadeInRight" data-wow-duration="0.34s" data-wow-delay=".4s">
+                    <a href="https://api.whatsapp.com/send?phone=5514996965634&text=Gostaria%20de%20fazer%20um%20orçamento!" target="_blank">
+                        <span class="contact-icon"><i class="fa fa-phone"></i></span>
+                        <p class="contact-detail">
+                            +55 (14) 9 9696-5634
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ********** Footer ********** -->
+    <footer class="footer text-center" id="Rodape">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <div class="social-icon wow animate__animated animate__bounceInUp">
+                        <a href="https://www.instagram.com/carroceriasaojorge?igsh=OG12dHppNG5zdjU2" target="_blank"><i
+                class="fab fa-instagram icone-midiasocial"></i>
+            </a>
+
+                        <a href="https://api.whatsapp.com/send?phone=5514996965634&text=Gostaria%20de%20fazer%20um%20orçamento!" target="_blank"><i class="fab fa-whatsapp icone-midiasocial"></i>
+            </a>
+
+                        <a href="mailto:williamgobbo@gmail.com?body=Gostaria%20de%20fazer%20um%20orçamento!" target="_blank">
+                            <i class="fa fa-envelope icone-midiasocial"></i>
+                        </a>
+                    </div>
+                    <br>
+                    <div class="copyright">
+                        <p class="footer-logo">
+                            &COPY; Copyright 2024 By Wesley Correa
+                            <a href="https://api.whatsapp.com/send?phone=5514998775049&text=Gostaria%20de%20fazer%20um%20orçamento!" target="_blank" class="icone-midiasocial-small">
+                                <i class="fab fa-whatsapp-square"></i>
+                            </a>
+                        </p>
+                        <div class="border-bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="icon-top">
+            <a class="my-nav-link" href="#home"><i class="fas fa-arrow-alt-circle-up"></i>
+      </a>
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Link POPUP JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha256-P93G0oq6PBPWTP1IR8Mz/0jHHUpaWL0aBJTKauisG7Q=" crossorigin="anonymous"></script>
+
+    <!-- Link Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
+
+    <!-- LINK WOW JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=" crossorigin="anonymous"></script>
+
+    <!-- LINK JS -->
+    <script src="static/js/main.js" language="javascript" type="text/javascript"></script>
+</body>
+
+
+
+</html>
